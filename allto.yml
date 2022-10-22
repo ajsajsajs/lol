@@ -7,4 +7,6 @@
   tasks:
 
     - name: create a file
-      command: touch playasd1.txt
+      file:
+        dest: "lolagain.txt"
+        state: touch
