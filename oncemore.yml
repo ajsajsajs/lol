@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  user: anisble
+  become: yes
+  connection: ssh
+
+  tasks:
+
+    - name: file creation
+      file:
+        path: "malli.txt"
+        state: touch
+
+
+    - name: data entry
+      copy:
+        dest: "malli.txt"
+        content: |
+
+          trying this again with new file
