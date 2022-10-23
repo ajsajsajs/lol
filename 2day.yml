@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+
+    - name: file creation
+      file:
+        path: "rendu.txt"
+        state: touch
+
+
+    - name: data entry
+      copy:
+        dest: "rendu.txt"
+        content: |
+
+          trying this again with new file
